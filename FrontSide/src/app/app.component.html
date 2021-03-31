@@ -1,0 +1,143 @@
+
+<div class="myclass">
+
+ <nav id="myid" class="navbar navbar-dark bg-primary navbar-fixed-top" style="background-color: #239bf1;height: 60px;">
+
+  <a class="navbar-brand" href="/">
+    <!-- <div class="logo-image">
+          <img src="/assets/images/smsLogo.png" class="img-fluid" style="height: 38px;
+          width: 40px;
+          margin-top: -4px;">
+    </div> -->
+</a>
+  <form id="page" class="form-inline">
+
+      <ul class="nav navbar-nav">
+          <li ><a class="hello" routerLink="Customerlogin/home" href="">Home</a></li>
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Category <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a routerLink="/Customerlogin/allopathic" href="#">Allopathic</a></li>
+              <li><a routerLink="/Customerlogin/homoeopathy" href="#">Homoeopathic</a></li>
+              <li><a routerLink="/Customerlogin/ayurvedic" href="#">Ayurvedic</a></li>
+            </ul>
+          </li>
+
+          
+          <li (click)="onLogin()" *ngIf="!isLoggedIn"><a routerLink="/Customerlogin" class="hello" href="#">Login & Signup</a></li>
+          
+          <li *ngIf="isLoggedIn" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">{{username}}<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <!-- <li><a  href="#1">Profile</a></li> -->
+              <li><a routerLink="/Customerlogin/orders" href="#2">Orders</a></li>
+              <li><a (click)="onLogout()" >Logout</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">More <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li> <a routerLink="/contact" routerLinkActive="active"
+                [routerLinkActiveOptions]="{exact:true}"> Contact Us </a> 
+              </li>
+            </ul>
+          </li>
+          <li ><a routerLink="/Customerlogin/cart" class="hello" > Cart</a></li>
+          <li ><a routerLink="/covid-services" class="hello" > Covid-19 Services</a></li>
+          <li ><a routerLink="/login" class="hello" href="#">Admin</a></li>
+        </ul>
+     
+    
+  <div> <a style="margin-left: 180px;margin-top:3px;font-size: medium" class="navbar-brand">@SMS</a> </div> 
+
+
+  <input [(ngModel)]="search" name="search" size="40" style="margin-top: 11px" class="form-control mr-sm-2" type="search" placeholder="Search for product" aria-label="search" >
+   <button (click)="onSearch()" style="margin-top: 11px" class="btn btn-info" type="submit">  <a href="Customerlogin/search"> Search </a> </button>
+  </form>                                                            
+
+  
+</nav>   
+ 
+
+<router-outlet></router-outlet>  
+
+      
+<div class="row">
+              <div class="col-md-12">
+               
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
+
+<!-- <div class="container">
+    <hr>
+        <div class="text-center center-block">
+            <p class="txt-railway">- Contact us -</p>
+            <br />
+          
+        </div>
+    <hr>
+</div> -->
+
+<br /> 
+
+</div>
+ 
+              
+</div>
+
+</div>
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+<div class="footer-bottom-area bg-dark-light section-padding-sm">
+                <div class="container">
+                    <div class="row widgets footer-widgets">
+
+                      <div class="col-lg-3 col-md-6 col-12">
+                          
+                        <div class="single-widget widget-about">
+                            <h5 class="widget-title">About Us</h5>
+                            <p>Service & Medical Shop brings to you an online platform, which can be accessed for all your health needs. We are trying to make healthcare a hassle-free experience for you. Get your allopathic, ayurvedic, homeopathic medicines, vitamins & nutrition supplements and other health-related products delivered at home.</p>
+                        </div>
+                    </div>
+
+                        <div class="col-lg-3 col-md-6 col-12">
+                          
+                            <div class="single-widget widget-about">
+                                <h5 class="widget-title">Reliable</h5>
+                                <p>All products displayed on Service & Medical Shop are procured from verified and licensed pharmacies.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-12">
+                          
+                          <div class="single-widget widget-about">
+                              <h5 class="widget-title">Affordable</h5>
+                              <p>Find affordable medicine substitutes, save up to 50% on health products.</p>
+                          </div>
+                      </div>
+
+                      <div class="col-lg-3 col-md-6 col-12">
+                          
+                        <div class="single-widget widget-about">
+                          <h5 class="widget-title">Contact Us</h5>
+                          <ul>
+                            <!-- <li><a routerLink="/contact" routerLinkActive="active"
+                              [routerLinkActiveOptions]="{exact:true}"> Contact </a> </li> -->
+                              <li class="address">
+                                  <span class="icon"><i class="fa fa-map-marker"></i></span>
+                                  <p>Address : Sector-24 Pradhikaran Nigdi, Pune.</p>
+                              </li>
+                              <li class="phone">
+                                  <span class="icon"><i class="fa fa-phone"></i></span>
+                                  <p><a href="#">+91 7568 54 3012</a></p>
+                              </li>
+                              <li class="email">
+                                  <span class="icon"><i class="fa fa-envelope-o"></i></span>
+                                  <p><a href="#">hello@sms.com</a></p>
+                              </li>
+                          </ul>
+                        </div>
+                    </div>
+
+                    </div>
+                </div>
+
+
